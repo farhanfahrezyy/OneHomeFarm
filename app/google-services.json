@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "316355897097",
+    "firebase_url": "https://onehomefarm-e11da-default-rtdb.firebaseio.com",
+    "project_id": "onehomefarm-e11da",
+    "storage_bucket": "onehomefarm-e11da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316355897097:android:fba7a85575990c622b95d8",
+        "android_client_info": {
+          "package_name": "com.example.onehomefarm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB64bIl4SOlQSLHaRxsImGh5SJN4rYSUQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#F1F0F0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:id="@+id/imagesc"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_user_profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/welcoming_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Hai, Selamat Datang"
+        android:textSize="@dimen/_7sdp"
+        android:textColor="#9795B2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagesc" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="M Farhan Fahrezy"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:textColor="#183A1D"
+        app:layout_constraintTop_toTopOf="@+id/welcoming_page"
+        app:layout_constraintStart_toEndOf="@+id/imagesc" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_bell"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/sc_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dp">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_158sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="20"
+                app:iss_delay="0"
+                app:iss_error_image="@color/red_D400"
+                app:iss_period="1500"
+                app:iss_placeholder="@color/transparent"
+                app:iss_selected_dot="@drawable/default_selected_dot"
+                app:iss_text_align="CENTER"
+                app:iss_unselected_dot="@drawable/default_unselected_dot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cl_1" />
+
+            <LinearLayout
+                android:id="@+id/mainNavbar"
+                android:background="@drawable/bg_nav_app"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@+id/imageSlider2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--main layout-->
+                <LinearLayout
+                    android:id="@+id/RaiseFund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <!--main apps-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/Onecheck"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/check" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OneCheck"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                        <ImageView
+                            android:id="@+id/OneAsk"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_chat" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OneAsk"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/OneMade"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:adjustViewBounds="true"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_made" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OneMade"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                        <ImageView
+                            android:id="@+id/OneNews"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_news" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OneNews"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/OneVR"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_vr" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OneVR"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:padding="@dimen/_8sdp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@null"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/eduOne"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_edu" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EduOne"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:padding="@dimen/_8sdp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@null"
+                            android:singleLine="true"
+                            android:gravity="left"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

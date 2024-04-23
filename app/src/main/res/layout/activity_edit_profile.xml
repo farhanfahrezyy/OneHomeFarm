@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:background="@color/neutral_N20"
+    tools:context=".activities.EditProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profileBackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_125sdp"
+            android:maxHeight="@dimen/_125sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/profileBackgroundHelper"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:backgroundTint="@color/neutral_N20"
+            app:layout_constraintTop_toBottomOf="@id/atas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/atas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:src="@drawable/ic_back"
+                app:tint="@color/blue1"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/editProfileBackground"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="@dimen/_30sdp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    app:tint="@color/neutral_N500"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_50"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/atas"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:elevation="@dimen/_1sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_profile"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                >
+
+                <FrameLayout
+                    android:id="@+id/layoutImage"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:background="@drawable/bg_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/userProfile"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_96sdp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bg_users_pictures"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_oval="true" />
+
+
+                </FrameLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/registeredBadge"
+                    android:layout_width="@dimen/_33sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    app:cardBackgroundColor="@color/neutral_N70"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/layoutImage"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/badgeImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_gallery" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/titleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:text="Name"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/neutral_N500"
+                android:layout_below="@id/layoutPhoto"/>
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:background="@drawable/edit_text_background_stroke_rounded"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/neutral_N300"
+                android:maxLength="20"
+                android:hint="Your username"
+                android:textColorHint="@color/neutral_N50"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:layout_below="@id/titleName"/>
+
+            <TextView
+                android:id="@+id/titleEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:text="Email"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/neutral_N500"
+                android:layout_below="@id/inputName"/>
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:background="@drawable/edit_text_background_stroke_rounded"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/neutral_N300"
+                android:maxLength="50"
+                android:hint="Your email"
+                android:textColorHint="@color/neutral_N50"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:layout_below="@id/titleEmail"/>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:text="Cancel"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/red_D200"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/bg_stroke_rounded"
+                app:backgroundTint="@color/red_D200"
+                android:layout_below="@id/inputEmail"
+                android:layout_toStartOf="@id/saveButton"/>
+
+            <ImageButton
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/primary_800"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/bg_editprofile_save"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/inputEmail"/>
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

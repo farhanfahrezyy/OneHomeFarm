@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomePageActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentContainer"
+        app:layout_constraintTop_toTopOf="@+id/BottomBar"/>
+
+    <!--suppress AndroidUnresolvableTag -->
+
+    <LinearLayout
+        android:id="@+id/BottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:elevation="@dimen/_20sdp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navbar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:background="@color/white">
+
+
+
+            <LinearLayout
+                android:id="@+id/HomeLayout"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/beranda"
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_21sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_home_selected"/>
+
+                <TextView
+                    android:id="@+id/berandaTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Beranda"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ChatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/chat"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_chat_unselected"/>
+
+            <!--suppress AndroidUnresolvableTag -->
+            <TextView
+                android:id="@+id/chatTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="MinChat"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/KebunLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/stat"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_stat_unselected"/>
+
+            <!--suppress AndroidUnresolvableTag -->
+            <TextView
+                android:id="@+id/stattxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Kebunku"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ProfileLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_profile_unselected"/>
+
+            <!--suppress AndroidUnresolvableTag -->
+            <TextView
+                android:id="@+id/profiletxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Profile"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    
+
+</RelativeLayout>
