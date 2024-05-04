@@ -2,76 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:backgroundTint="#F1F0F0"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageButton
-        android:id="@+id/imagesc"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginHorizontal="@dimen/_10sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:src="@drawable/ic_user_profile"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/welcoming_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:text="Hai, Selamat Datang"
-        android:textSize="@dimen/_7sdp"
-        android:textColor="#9795B2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagesc" />
-
-    <TextView
-        android:id="@+id/profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:text="M Farhan Fahrezy"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="@dimen/_10sdp"
-        android:textStyle="bold"
-        android:textColor="#183A1D"
-        app:layout_constraintTop_toTopOf="@+id/welcoming_page"
-        app:layout_constraintStart_toEndOf="@+id/imagesc" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:src="@drawable/ic_bell"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ScrollView
         android:id="@+id/sc_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_name"
-        android:scrollbars="none">
+        app:layout_constraintTop_toBottomOf="@+id/headerlay1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="2dp">
+            android:paddingBottom="@dimen/_210sdp">
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/imageSlider2"
@@ -94,19 +46,19 @@
 
             <LinearLayout
                 android:id="@+id/mainNavbar"
-                android:background="@drawable/bg_nav_app"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_1sdp"
                 android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_1sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/bg_nav_app"
+                android:gravity="center"
+                android:orientation="horizontal"
                 android:padding="@dimen/_8sdp"
                 android:paddingBottom="@dimen/_8sdp"
-                app:layout_constraintTop_toBottomOf="@+id/imageSlider2"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageSlider2">
 
                 <!--main layout-->
                 <LinearLayout
@@ -115,186 +67,226 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="horizontal">
                     <!--main apps-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginRight="@dimen/_20sdp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/Onecheck"
+                            android:id="@+id/FarmNews"
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
-                            android:adjustViewBounds="true"
                             android:layout_gravity="center"
+                            android:adjustViewBounds="true"
                             android:padding="@dimen/_8sdp"
-                            android:src="@drawable/check" />
+                            android:src="@drawable/ic_news" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="OneCheck"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="FarmNews"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageView
-                            android:id="@+id/OneAsk"
+                            android:id="@+id/FarmAsk"
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
                             android:padding="@dimen/_8sdp"
                             android:src="@drawable/ic_chat" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="OneAsk"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="FarmAsk"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginRight="@dimen/_20sdp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/OneMade"
+                            android:id="@+id/MadeFarm"
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:adjustViewBounds="true"
                             android:padding="@dimen/_8sdp"
                             android:src="@drawable/ic_made" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="OneMade"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="MadeFarm"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageView
-                            android:id="@+id/OneNews"
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_marginTop="@dimen/_10sdp"
-                            android:padding="@dimen/_8sdp"
-                            android:src="@drawable/ic_news" />
+                            android:padding="@dimen/_8sdp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="OneNews"
-                            android:singleLine="true"
+
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginRight="@dimen/_20sdp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/OneVR"
+                            android:id="@+id/FVR"
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:padding="@dimen/_8sdp"
                             android:src="@drawable/ic_vr" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="OneVR"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="FarmAR"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_marginTop="@dimen/_10sdp"
-                            android:padding="@dimen/_8sdp"
-                            />
+                            android:padding="@dimen/_8sdp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@null"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="@null"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/eduOne"
+                            android:id="@+id/eduFarm"
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:padding="@dimen/_8sdp"
                             android:src="@drawable/ic_edu" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="EduOne"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="EduFarm"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_marginTop="@dimen/_10sdp"
-                            android:padding="@dimen/_8sdp"
-                            />
+                            android:padding="@dimen/_8sdp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@null"
-                            android:singleLine="true"
                             android:gravity="left"
-                            android:textSize="@dimen/_10ssp"
+                            android:singleLine="true"
+                            android:text="@null"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="@dimen/_10ssp" />
 
                     </LinearLayout>
-
-
 
 
                 </LinearLayout>
 
 
-
-
             </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/berita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/mainNavbar">
+
+
+                <ImageView
+                    android:id="@+id/selengkapnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:src="@drawable/selengkapnya"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_vertical"
+                    android:text="Berita Terkini"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/urgentFundRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/berita"
+                tools:layout_editor_absoluteX="13dp"
+                android:paddingBottom="@dimen/_200sdp"
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -302,7 +294,74 @@
 
     </ScrollView>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerlay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-    
+        <ImageButton
+            android:id="@+id/imagesc"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_user_profile"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/welcoming_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Hai, Selamat Datang"
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#9795B2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imagesc" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="M Farhan Fahrezy"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textColor="#183A1D"
+            app:layout_constraintTop_toTopOf="@+id/welcoming_page"
+            app:layout_constraintStart_toEndOf="@+id/imagesc" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/ic_bell"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

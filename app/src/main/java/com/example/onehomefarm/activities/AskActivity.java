@@ -41,7 +41,7 @@ public class AskActivity extends AppCompatActivity {
 
         init();
         listenMessages();
-        setListeners();
+        setListener();
     }
 
     private void init() {
@@ -54,6 +54,7 @@ public class AskActivity extends AppCompatActivity {
         );
         binding.communityRecyclerView.setAdapter(communityAdapter);
         database = FirebaseFirestore.getInstance();
+
 
     }
 
@@ -98,7 +99,7 @@ public class AskActivity extends AppCompatActivity {
         return new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(date);
     }
 
-    private void setListeners() {
+    private void setListener() {
         binding.layoutSend.setOnClickListener(v -> sendMessage());
 
         binding.backButton.setOnClickListener(v -> {
@@ -117,4 +118,6 @@ public class AskActivity extends AppCompatActivity {
             database.collection(Constants.KEY_COLLECTION_COMMUNITY).add(message);
         }
     }
+
+
 }

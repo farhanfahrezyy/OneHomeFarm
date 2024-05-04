@@ -3,6 +3,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+
     }
 }
 dependencyResolutionManagement {
@@ -13,6 +14,15 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
+gradle.ext.androidxMediaModulePrefix = ''
+def modulePrefix = ':'
+if (gradle.ext.has('androidxMediaModulePrefix')) {
+    modulePrefix += gradle.ext.androidxMediaModulePrefix
+}
 
+rootProject.name = 'androidx.media3'
+gradle.ext.rootProjectIsAndroidXMedia3 = true
+
+gradle.ext.androidxMediaEnableMidiModule = true
 rootProject.name = "OneHomeFarm"
 include ':app'

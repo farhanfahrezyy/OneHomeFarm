@@ -17,7 +17,7 @@
         android:id="@+id/navbarChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_50sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -54,20 +54,16 @@
                     android:textSize="@dimen/_10sdp"
                     android:textColor="@color/blue1"/>
 
-
-
-
-
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layoutAI"
                 android:layout_marginLeft="@dimen/_1sdp"
                 android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_25sdp"
                 android:background="@drawable/bg_round_neutral">
-
 
                 <TextView
                     android:id="@+id/textAI"
@@ -81,9 +77,6 @@
                     android:padding="@dimen/_1sdp"
                     android:textSize="@dimen/_10sdp"
                     android:textColor="#A4A4A4"/>
-
-
-
 
             </LinearLayout>
 

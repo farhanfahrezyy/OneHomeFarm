@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp">
+
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasil Perhitungan:"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textHeader">
+
+            <TextView
+                android:id="@+id/JenisTanah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Jenis Tanah:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/JenisTanahDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintTop_toBottomOf="@id/JenisTanah"
+                android:text="Lempung dengan tingkat keasaman sedang (pH 6-7)."/>
+
+            <ImageView
+                android:id="@id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/JenisTanahDeskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/ic_line"/>
+
+            <TextView
+                android:id="@+id/lokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Lokasi:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/LokasiDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lokasi"
+                android:text="Lokasi: Kota X, ketinggian 200 meter di atas permukaan laut."/>
+
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/LokasiDeskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/ic_line"/>
+
+            <TextView
+                android:id="@+id/VarietasUnggul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_bold"                android:text="Varietas Unggul:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/VarietasDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/VarietasUnggul"
+                android:text="Lokasi: Kota X, ketinggian 200 meter di atas permukaan laut."/>
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/VarietasDeskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/ic_line"/>
+
+            <TextView
+                android:id="@+id/KebutuhanAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Kebutuhan Air:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/KebutuhanAirDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/KebutuhanAir"
+                android:text="Lokasi: Kota X, ketinggian 200 meter di atas permukaan laut."/>
+
+            <ImageView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/KebutuhanAirDeskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/ic_line"/>
+
+            <TextView
+                android:id="@+id/NutrisiTanah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line4"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Nutrisi Tanah:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/NutrisiTanahDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NutrisiTanah"
+                android:text="Lokasi: Kota X, ketinggian 200 meter di atas permukaan laut."/>
+
+            <ImageView
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/NutrisiTanahDeskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/ic_line"/>
+
+            <TextView
+                android:id="@+id/Pemupukan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Pemupukan:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/PemupukanDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Pemupukan"
+                android:text="Lokasi: Kota X, ketinggian 200 meter di atas permukaan laut."/>
+
+
+            <ImageView
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/PemupukanDeskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/ic_line"/>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        
+        <TextView
+            android:id="@+id/EstimasiBiaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/contentBox"
+            android:text="Estimasi Biaya"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EstimasiBiaya"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:text="Rp. 18,000,000;-"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

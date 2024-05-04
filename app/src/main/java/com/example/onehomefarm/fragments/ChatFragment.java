@@ -103,9 +103,9 @@ public class ChatFragment extends Fragment {
     private void setListeners() {
         binding.layoutSend.setOnClickListener(v -> sendMessage());
 
-//        binding.backButton.setOnClickListener(v -> {
-//            requireActivity().onBackPressed();
-//        });
+        binding.backButton.setOnClickListener(v -> {
+            requireActivity().onBackPressed();
+        });
 
     }
 

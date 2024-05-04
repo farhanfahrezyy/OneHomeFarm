@@ -16,6 +16,9 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.onehomefarm.R;
 import com.example.onehomefarm.activities.AskActivity;
 import com.example.onehomefarm.activities.ChatActivity;
+import com.example.onehomefarm.activities.EduActivity;
+import com.example.onehomefarm.activities.MadeActivity;
+import com.example.onehomefarm.activities.NewsActivity;
 import com.example.onehomefarm.databinding.FragmentHomeBinding;
 
 import java.util.ArrayList;
@@ -33,8 +36,6 @@ public class HomeFragment extends Fragment {
     }
 
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,18 +49,29 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return binding.getRoot();
 
-
     }
 
     private void setListeners() {
-        binding.OneAsk.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), AskActivity.class);
+        binding.FarmNews.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), NewsActivity.class);
             intent.putExtra("data", "Hello, World!");
             startActivity(intent);
         });
 
-        binding.OneNews.setOnClickListener(v -> {
+        binding.FarmAsk.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), ChatActivity.class);
+            intent.putExtra("data", "Hello, World!");
+            startActivity(intent);
+        });
+
+        binding.MadeFarm.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), MadeActivity.class);
+            intent.putExtra("data", "Hello, World!");
+            startActivity(intent);
+        });
+
+        binding.eduFarm.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), EduActivity.class);
             intent.putExtra("data", "Hello, World!");
             startActivity(intent);
         });

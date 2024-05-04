@@ -13,7 +13,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.OneHomeFarm."
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.SubVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DetailNewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DetailVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.WhistlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.EduActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MadeActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.ChatActivity"
             android:exported="false" />

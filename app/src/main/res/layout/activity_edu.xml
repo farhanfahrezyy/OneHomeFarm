@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EduActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/neutral_N20"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                app:tint="@color/neutral_N500" />
+
+            <TextView
+                android:id="@+id/chatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_120sdp"
+                android:layout_toEndOf="@+id/backButton"
+                android:fontFamily="@font/poppins_regular"
+                android:text="EduOne"
+                android:textColor="@color/neutral_N500"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
+    <HorizontalScrollView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/null_radio_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="All"
+                    android:textColor="@drawable/radio_text_selector" />
+
+                <RadioButton
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/null_radio_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Hidroponik"
+                    android:textColor="@drawable/radio_text_selector" />
+
+                <RadioButton
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="1dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/null_radio_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="Teknologi"
+                    android:textColor="@drawable/radio_text_selector" />
+
+                <RadioButton
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/null_radio_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Environment"
+                    android:textColor="@drawable/radio_text_selector" />
+
+                <RadioButton
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/null_radio_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="Others"
+                    android:textColor="@drawable/radio_text_selector" />
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/category">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Popular Course"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/whistlist"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/saved_book"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+        />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/headerName"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edit_text_background_stroke"
+                android:drawableStart="@drawable/ic_search_new"
+                android:drawablePadding="@dimen/_8sdp"
+                app:queryHint="EduOne"
+                app:iconifiedByDefault="false"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/neutral_N60"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/header" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/videoRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

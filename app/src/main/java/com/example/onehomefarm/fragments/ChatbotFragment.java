@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -16,18 +15,14 @@ import android.view.ViewGroup;
 import com.example.onehomefarm.R;
 import com.example.onehomefarm.adapters.ChatbotAdapter;
 import com.example.onehomefarm.databinding.FragmentChatbotBinding;
-import com.example.onehomefarm.models.API;
 import com.example.onehomefarm.models.Chat;
-import com.example.onehomefarm.models.ChatBotMessage;
 import com.example.onehomefarm.models.PromptMessage;
 import com.example.onehomefarm.utillities.Constants;
 import com.example.onehomefarm.utillities.PreferenceManager;
-import com.google.common.net.MediaType;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.rpc.context.AttributeContext;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.json.JSONArray;

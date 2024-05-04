@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailVideoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/neutral_N20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                app:tint="@color/neutral_N500" />
+
+            <TextView
+                android:id="@+id/headerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:layout_toEndOf="@+id/backButton"
+                android:fontFamily="@font/poppins_regular"
+                android:text="EduFarm"
+                android:textColor="@color/neutral_N500"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/bg_rounded_yt"
+        app:circularflow_defaultRadius="@dimen/_20sdp"
+        app:layout_constraintCircleRadius="@dimen/_20sdp"
+        app:autoPlay="true"
+        app:videoId="9K2-y1ih4j8"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer">
+
+
+        <ScrollView
+            android:id="@+id/sc_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_200sdp"
+                android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:id="@+id/VideoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Teknologi AI Membantu Petani Meningkatkan Produksi di Pertanian"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/VideoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text="Dalam era digitalisasi yang terus berkembang, teknologi semakin banyak memberikan kontribusi positif di berbagai sektor, termasuk pertanian. Salah satu teknologi yang sedang berkembang pesat dan memberikan dampak positif adalah kecerdasan buatan (AI).
+
+\n\n    AI kini telah hadir dalam bentuk aplikasi yang membantu petani meningkatkan produksi dan efisiensi di pertanian. Salah satu contohnya adalah aplikasi GroBot, yang memberikan konsultasi AI untuk petani. Aplikasi ini memberikan rekomendasi tentang waktu yang tepat untuk menanam, pemilihan tanaman yang sesuai dengan kondisi lahan, dan juga tips perawatan tanaman yang efektif.
+
+\n\n    Selain itu, aplikasi GroCheck juga memberikan fitur yang memungkinkan petani untuk mengecek apakah tanaman yang mereka tanam sudah sesuai dengan konsep yang diinginkan, serta mencocokkan jenis tanaman dengan lokasi tanam yang ideal.
+
+\n\n    Fitur lain yang tidak kalah penting adalah GroCation, yang membantu petani untuk menemukan lokasi pertanian yang sesuai dengan kebutuhan mereka. Aplikasi ini menyediakan informasi lengkap tentang lokasi pertanian, kondisi tanah, dan sumber air yang tersedia di sekitar lokasi tersebut.
+
+Dengan adanya teknologi AI dalam pertanian, diharapkan dapat membantu petani dalam meningkatkan produksi, mengurangi risiko gagal panen, serta meningkatkan efisiensi penggunaan sumber daya seperti air dan pupuk. Dengan demikian, pertanian dapat menjadi lebih berkelanjutan dan memberikan manfaat yang lebih besar bagi masyarakat.
+
+
+
+
+
+
+"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

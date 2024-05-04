@@ -66,13 +66,6 @@ public class SignInActivity extends AppCompatActivity {
             finish();
         }
 
-
-
-
-
-
-
-
         binding.forgotPassword.setPaintFlags(binding.forgotPassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         setListener();
 
